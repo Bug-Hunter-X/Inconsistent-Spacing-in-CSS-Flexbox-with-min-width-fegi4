@@ -1,0 +1,18 @@
+The following CSS code results in unexpected behavior in some browsers:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  min-width: 100px;
+}
+```
+
+This CSS intends to distribute three `.item` elements evenly across the `.container`, but due to the `min-width` property, the spacing might not always be uniform. The total width of the three `item` elements might exceed the container's width, leading to unexpected wrapping or overlapping.
+
+The problem is particularly noticeable when the browser window is resized, as the space between elements changes dynamically and unexpectedly.
