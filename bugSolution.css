@@ -1,0 +1,17 @@
+To address the inconsistent spacing, we can use `flex-shrink` to allow items to shrink if necessary to maintain even spacing. Here's the updated CSS:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 10px;
+  min-width: 100px;
+  flex-shrink: 1; /* Allow items to shrink */
+}
+```
+
+Adding `flex-shrink: 1;` allows the elements to shrink proportionately to maintain even spacing. This ensures that the layout remains consistent across different screen sizes and avoids unexpected wrapping or overlapping.
